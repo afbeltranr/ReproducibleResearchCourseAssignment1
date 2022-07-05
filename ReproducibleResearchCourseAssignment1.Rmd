@@ -52,6 +52,7 @@ activity$dayoftheweek <- weekdays(activity$date)
 Now that we have a way to classify data, it is possible to display it in a way we can examine it. For instance a histogram can be printed using the function `qplot()` from the package `ggplot2`.
 
 ```{r}
+
 library(dplyr)
 library(ggplot2)
 stepsByDay <- activity %>% group_by(date) %>% summarize(stepsByDay = sum(steps,na.rm=T))
