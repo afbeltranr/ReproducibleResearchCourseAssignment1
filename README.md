@@ -47,7 +47,7 @@ Also it can be useful to find which day of the week corresponds to each measurem
 activity$dayoftheweek <- weekdays(activity$date)
 ```
 
-#2. Histogram of the total number of steps taken each day
+# 2. Histogram of the total number of steps taken each day
 
 Now that we have a way to classify data, it is possible to display it in a way we can examine it. For instance a histogram can be printed using the function `qplot()` from the package `ggplot2`.
 
@@ -64,7 +64,7 @@ qplot(stepsByDay,
 ```
 ![](https://github.com/afbeltranr/ReproducibleResearchCourseAssignment1/blob/main/img/activityPerDay.png)
 
-#3. Mean and median number of steps taken each day
+# 3. Mean and median number of steps taken each day
 
 Now we can use the data to calculate dome descriptive measures of the amount of steps taken per day such as the `mean` and the `median`
 
@@ -74,7 +74,7 @@ meanstepsperday <- stepsByDay %>% summarise(average = mean(stepsByDay, na.rm = T
 meanstepsperday
 ```
 
-#4. What is the average daily activity pattern?
+# 4. What is the average daily activity pattern?
 
 
 We can use the `interval` variable to track how activity changes, at different times of the day. That way we can evaluate in average how the individual's activity is along the day, and if they are more active at mornings, afternoons or evenings.
