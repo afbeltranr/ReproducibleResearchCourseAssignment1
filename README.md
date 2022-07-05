@@ -62,7 +62,7 @@ qplot(stepsByDay,
       xlab = 'total Steps per day',
       ylab = 'Frequency with binwidth 500 ')
 ```
-
+![](https://github.com/afbeltranr/ReproducibleResearchCourseAssignment1/blob/main/img/activityPerDay.png)
 
 #3. Mean and median number of steps taken each day
 
@@ -95,7 +95,7 @@ qplot(interval,
       )
 ```
 
-
+![](https://github.com/afbeltranr/ReproducibleResearchCourseAssignment1/blob/main/img/averageStepsAcrossDays.png)
 
 # 5. The 5-minute interval that, on average, contains the maximum number of steps
 
@@ -152,6 +152,10 @@ qplot(stepsPerDay, data = stepsByDay_binded,
       xlab = 'total Steps per day',
       ylab = 'Frequency with binwidth 500 ')
 ```
+
+!()[https://github.com/afbeltranr/ReproducibleResearchCourseAssignment1/blob/main/img/ActivityPerDayCleaned.png]
+
+
 We can also assess how replacing NAs by numbers (increasing the sample size) affects the values of the mean and the median:
 
 ```{r}
@@ -169,5 +173,7 @@ meansteps <- activity_binded %>% group_by(interval, weekend) %>% summarise(avera
 
 qplot(interval,average,data=meansteps,geom="line",facets=weekend~.,xlab="5-minute interval",ylab="average number of steps",main="Average steps pattern between Weekday and Weekend")
 ```
+
+![](https://github.com/afbeltranr/ReproducibleResearchCourseAssignment1/blob/main/img/panelPlot.png)
 
 We can see that at weekends, this person takes a longer time to begin their walk. Also the number of steps are better distributed along the time interval axis. 
